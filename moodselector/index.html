@@ -10,23 +10,24 @@
   	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	
 	<!-- Include a sitewide CSS file for consistent styling across the site -->
-	<link rel="stylesheet" type="text/css" href="../css/site.css">
+	<link rel="stylesheet" type="text/css" href="css/moodselector.css">
 	
 	<!-- load jQuery library to make javascript easier (must be above our lab js)-->
 	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 	<!-- Link to javascript file - DEFER waits until all elements are rendered -->
-	<script type="text/javascript" src="/moodselector/js/moodselector.js" DEFER></script>
+	<script type="text/javascript" src="js/moodselector.js" DEFER></script>
 </head>
 <body>
 	<!-- Style this page by changing the CSS in ../css/site.css or css/lab.css -->
 	<main id="content">
 		<section>
-			<a href = "../site.html"> <button class="title_screen">Return to Title Screen</button> </a>
+			<a href = "../site.html"> <button id="title-screen" >Return to Title Screen</button> </a>
             <h1>Mood Tracker</h1>
 			<div class="minor-section">
 					<h2>How are you feeling currently? Please select as many emotions as you'd like.</h2>
 					<p>
-                    <button class="emotions" id="happy-button">Happy</button> <br>
+    				<!-- Sets up buttons for each of the emotions with the same class but a unique ID. -->
+					<button class="emotions" id="happy-button">Happy</button> <br>
                     <button class="emotions" id="sad-button">Sad</button> <br>
                     <button class="emotions" id="frustrated-button">Frustrated</button> <br>
                     <button class="emotions" id="tired-button">Tired</button> <br>
@@ -34,6 +35,7 @@
                     <button class="emotions" id="energetic-button">Energetic</button> <br>
                     <button class="emotions" id="anxious-button">Anxious</button> <br>
                     <button class="emotions" id="nauseous-button">Nauseous</button> <br> <br>
+					<!-- Makes it so if the submit button is clicked, it will take the user to the recommendations site. -->
                     <a href = "../recommendations/index.html"> <button class="recommendations">Submit</button> </a>
 					</p>
 			</div>

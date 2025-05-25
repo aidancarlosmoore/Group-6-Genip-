@@ -1,33 +1,106 @@
 // Makes it so that when you click on the "Return to Title Screen" button, you go to that page
-$(".title_screen").click(function() {
+$("#title-screen").click(function() {
   window.location.href = "site.html";
 });
 
 // Initializing all the Boolean variables of the user's emotions
-let happy = False;
-let sad = False;
-let tired = False;
-let studious = False;
-let energetic = False;
-let anxious = False;
-let nauseous = False;
+let happy = false;
+let sad = false;
+let frustrated = false;
+let tired = false;
+let studious = false;
+let energetic = false;
+let anxious = false;
+let nauseous = false;
 
-// Creates an event listener that changes the happy variable based on user clicks, as well as its color
+// Initializing an array with each of the emotion Booleans so that they can be easily accessed as a group
+let emotionsArray = [happy, sad, frustrated, tired, studious, energetic, anxious, nauseous];
+
+// Creates an event listener that updates the emotion Booleans in the array based on user clicks, as well as the button's color
 $("#happy-button").click(function() {
-  if (happy == True) {
-    happy = False;
+  if (emotionsArray[0] == true) {
+    emotionsArray[0] = false;
+    document.getElementById("happy-button").style.backgroundColor='#F0F0F0';
   }
   else {
-    happy = True;
-    document.getElementById("happy-button").style.color='#D7DA3F';
+    emotionsArray[0] = true;
     document.getElementById("happy-button").style.backgroundColor='#D7DA3F';
   }
 });
 
 $("#sad-button").click(function() {
-  let sad = True
+  if (emotionsArray[1] == true) {
+    emotionsArray[1] = false;
+    document.getElementById("sad-button").style.backgroundColor='#F0F0F0';
+  }
+  else {
+    emotionsArray[1] = true;
+    document.getElementById("sad-button").style.backgroundColor='#0369C2';
+  }
 });
 
-$("#sad-button").click(function() {
-  let sad = True
+$("#frustrated-button").click(function() {
+  if (emotionsArray[2] == true) {
+    emotionsArray[2] = false;
+    document.getElementById("frustrated-button").style.backgroundColor='#F0F0F0';
+  }
+  else {
+    emotionsArray[2] = true;
+    document.getElementById("frustrated-button").style.backgroundColor='#F2393D';
+  }
+});
+
+$("#tired-button").click(function() {
+  if (emotionsArray[3] == true) {
+    emotionsArray[3] = false;
+    document.getElementById("tired-button").style.backgroundColor='#F0F0F0';
+  }
+  else {
+    emotionsArray[3] = true;
+    document.getElementById("tired-button").style.backgroundColor='#8680C6';
+  }
+});
+
+$("#studious-button").click(function() {
+  if (emotionsArray[4] == true) {
+    emotionsArray[4] = false;
+    document.getElementById("studious-button").style.backgroundColor='#F0F0F0';
+  }
+  else {
+    emotionsArray[4] = true;
+    document.getElementById("studious-button").style.backgroundColor='#50B8B7';
+  }
+});
+
+$("#energetic-button").click(function() {
+  if (emotionsArray[5] == true) {
+    emotionsArray[5] = false;
+    document.getElementById("energetic-button").style.backgroundColor='#F0F0F0';
+  }
+  else {
+    emotionsArray[5] = true;
+    document.getElementById("energetic-button").style.backgroundColor='#FF76B4';
+  }
+});
+
+$("#anxious-button").click(function() {
+  if (emotionsArray[6] == true) {
+    emotionsArray[6] = false;
+    document.getElementById("anxious-button").style.backgroundColor='#F0F0F0';
+  }
+  else {
+    emotionsArray[6] = true;
+    document.getElementById("anxious-button").style.backgroundColor='#FF7F00';
+  }
+});
+
+$("#nauseous-button").click(function() {
+  if (emotionsArray[7] == true) {
+    emotionsArray[7] = false;
+    document.getElementById("nauseous-button").style.backgroundColor='#F0F0F0';
+  }
+  else {
+    emotionsArray[7] = true;
+    document.getElementById("nauseous-button").style.backgroundColor='#4DBE46';
+  }
 });

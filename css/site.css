@@ -1,12 +1,13 @@
 .background{
-width:100%;
-height:100vh;
-background-image: url(/img/SiteBackground.JPG);
+width: 100%;
+height:100%;
+background-image: url(../img/SiteBackground.JPG);
 }
 #content{
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
 }
+
 .suprise-me-button{
     width: 15%;
     font-size: x-large;
