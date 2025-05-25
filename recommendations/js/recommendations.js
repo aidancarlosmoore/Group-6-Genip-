@@ -70,7 +70,67 @@ const recipeData = {
       { name: "Plain Rice", url: "https://www.google.com/search?q=how+to+make+plain+rice" }
     ]
   };
+
+  /* WIP recipe data
   
+  // how to format objects:
+    // each object is a recipe with a name key, url key, moods key, and allergenDiets key
+    // moods value is an array of booleans that follows foods in this order: happy, sad, frustrated, tired, studious, energetic, anxious, nauseous
+      // 'true' means fits in that category, which shows the item on search
+    // allergenDiets value is an array that follows allergens and diets in this order: peanuts, tree nuts, dairy, gluten, eggs, soybeans, sesame, shellfish, vegan, vegetarian, pescetarian, keto, gluten-free, kosher, halal
+      // 'true' for allergens means does contain that allergen, which removes the item on search
+      // 'true' for diets means fits in that category, which shows the item on search
+
+  const recipeData = [
+    {
+      name: "Sample Recipe Template",
+      url: "https://www.google.com",
+      moods: [happy, sad, frustrated, tired, studious, energetic, anxious, nauseous],
+      allergenDiets: [peanuts, tree nuts, dairy, gluten, eggs, soybeans, sesame, shellfish, vegan, vegetarian, pescetarian, keto, gluten-free, kosher, halal]
+    },
+    {
+      name: "Black Bean Quesadillas",
+      url: "https://www.theyummymuffin.com/single-post/black-bean-quesadilla-nachos",
+      moods: [true, false, false, false, false, false, false, false],
+      allergenDiets: [true, true, false, false, false, false, true, true, true, true, false, true, true, true]
+    },
+    {
+      name: ""Chicken Tenders and Fries",
+      url: "https://whereismyspoon.co/chicken-tenders-and-fries/",
+      moods: [true, false, false, false, false, false, false, false],
+      allergenDiets: [false, false, true, false, true, false, false, false, false, false, false, false, false, true, true]
+    },
+    {
+      name: "Chocolate Covered Strawberries",
+      url: "https://www.allrecipes.com/gallery/favorite-dark-chocolate-desserts/",
+      moods: [happy, sad, frustrated, tired, studious, energetic, anxious, nauseous],
+      allergenDiets: [peanuts, tree nuts, dairy, gluten, eggs, soybeans, sesame, shellfish, vegan, vegetarian, pescetarian, keto, gluten-free, kosher, halal]
+    },
+  ]
+
+  // functions to sort data and get results
+
+  const moodsArr = ["happy", "sad", "frustrated", "tired", "studious", "energetic", "anxious", "nauseous"];
+  var moodsArrBoolean = [false, false, false, false, false, false, false, false];
+
+  selectedMoods.forEach(mood => {
+    for (i = 0; i < moodsArr.length; i++) {
+      if (mood == moodsArr) {
+        moodsArrBoolean[i] = true;
+      }
+    }
+  });
+
+  for (i = 0; i < moodsArrBoolean.length; i++) {
+      recipeData.forEach((element) => {
+        if (this.moods[i] == true) {
+          //add current object data as new element in HTML
+        }
+      })
+  };
+
+  */
+
   const selectedMoods = JSON.parse(localStorage.getItem('selectedMoods')) || [];
   const outputDiv = document.getElementById('output');
   
