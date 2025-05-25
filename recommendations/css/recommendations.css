@@ -1,0 +1,71 @@
+/* Container for all recipes */
+#output {
+    max-width: 900px;
+    margin: 20px auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0 15px;
+  }
+  
+  /* Mood headings */
+  #output h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    border-left: 8px solid;
+    padding-left: 12px;
+    color: #333;
+  }
+  
+  /* Color-coded mood borders for headings */
+  #output h3:nth-of-type(1) { border-color: #D7DA3F; }  /* happy */
+  #output h3:nth-of-type(2) { border-color: #0369C2; }  /* sad */
+  #output h3:nth-of-type(3) { border-color: #F2393D; }  /* frustrated */
+  #output h3:nth-of-type(4) { border-color: #8680C6; }  /* tired */
+  #output h3:nth-of-type(5) { border-color: #50B8B7; }  /* studious */
+  #output h3:nth-of-type(6) { border-color: #FF76B4; }  /* energetic */
+  #output h3:nth-of-type(7) { border-color: #FF7F00; }  /* anxious */
+  #output h3:nth-of-type(8) { border-color: #4DBE46; }  /* nauseous */
+  
+  /* Recipe card styling */
+  .recipe-card {
+    background-color: #fafafa;
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    padding: 12px 20px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.07);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .recipe-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+  
+  /* Recipe title */
+  .recipe-card h4 {
+    margin: 0 0 8px 0;
+    font-weight: 600;
+    color: #222;
+  }
+  
+  /* Recipe link */
+  .recipe-card a {
+    color: #0073e6;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .recipe-card a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Message for no moods selected */
+  #output p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-top: 50px;
+    text-align: center;
+  }
+  
+  

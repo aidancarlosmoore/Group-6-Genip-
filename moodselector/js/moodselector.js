@@ -104,3 +104,28 @@ $("#nauseous-button").click(function() {
     document.getElementById("nauseous-button").style.backgroundColor='#4DBE46';
   }
 });
+
+// Map of moods to indices (to align with emotionsArray order)
+const moods = ["happy", "sad", "frustrated", "tired", "studious", "energetic", "anxious", "nauseous"];
+
+// When user clicks "Submit" (make sure your button has id="submit-button")
+$("#submit-button").click(function() {
+  // Collect moods that are true in emotionsArray
+  let selectedMoods = [];
+  emotionsArray.forEach((selected, index) => {
+    if (selected) {
+      selectedMoods.push(moods[index]);
+    }
+  });
+
+  if (selectedMoods.length === 0) {
+    alert("Please select at least one mood before submitting.");
+    return;
+  }
+
+  // Save selected moods to localStorage
+  localStorage.setItem('selectedMoods', JSON.stringify(selectedMoods));
+
+  // Redirect to recommendations page (adjust path if needed)
+  window.location.href = "recommendations/index.html";
+});
