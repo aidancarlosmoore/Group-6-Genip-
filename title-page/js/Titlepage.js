@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Slight delay so the sound plays before redirect
     setTimeout(function () {
-      window.location.href = "index.html";
+      window.location.href = "../index.html";
     }, 200); // adjust this if you want a longer/shorter pause
   });
 });
