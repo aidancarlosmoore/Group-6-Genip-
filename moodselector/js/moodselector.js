@@ -1,6 +1,6 @@
 // Makes it so that when you click on the "Return to Title Screen" button, you go to that page
 $("#title-screen").click(function() {
-  window.location.href = "site.html";
+  window.location.href = "index.html";
 });
 
 // Initializing all the Boolean variables of the user's emotions
