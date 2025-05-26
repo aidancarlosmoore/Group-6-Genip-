@@ -103,7 +103,7 @@ const recipeData = {
       allergenDiets: [true, true, false, false, false, false, true, true, true, true, false, true, true, true]
     },
     {
-      name: ""Chicken Tenders and Fries",
+      name: "Chicken Tenders and Fries",
       url: "https://whereismyspoon.co/chicken-tenders-and-fries/",
       moods: [true, false, false, false, false, false, false, false],
       allergenDiets: [false, false, true, false, true, false, false, false, false, false, false, false, false, true, true]
@@ -112,8 +112,14 @@ const recipeData = {
       name: "Chocolate Covered Strawberries",
       url: "https://www.allrecipes.com/gallery/favorite-dark-chocolate-desserts/",
       moods: [happy, sad, frustrated, tired, studious, energetic, anxious, nauseous],
-      allergenDiets: [peanuts, tree nuts, dairy, gluten, eggs, soybeans, sesame, shellfish, vegan, vegetarian, pescetarian, keto, gluten-free, kosher, halal]
+      allergenDiets: [false, false, false, false, false, false, false, false, true, true, true, true, false, true, true]
     },
+    {
+      name: "Dark Chocolate Bacon Cupcakes",
+      url: "https://www.allrecipes.com/recipe/161019/dark-chocolate-bacon-cupcakes/"
+      moods: [true, true, false, false, false, false, true, false],
+      allergenDiets: [false, false, true, true, true, false, false, false, false, false, false, false, false, false, false]
+    }
   ]
 
   // functions to sort data and get results
