@@ -62,7 +62,7 @@ const recipeData = {
       { name: "Roast Beef Lettuce Wrap", url: "https://www.eastewart.com/recipes-and-nutrition/roast-beef-lettuce-wraps/" },
       { name: "Smoked Salmon Sandwich", url: "https://www.eastewart.com/recipes-and-nutrition/smoked-salmon-sandwich/" },
       { name: "Pumpkin Hummus Wraps", url: "https://www.eastewart.com/recipes-and-nutrition/savory-spiced-pumpkin-hummus-pumpkin-hummus-veggie-wraps-food-as-medicine/" },
-      { name: "Aragula Salad", url: "https://www.allrecipes.com/recipe/71600/easy-arugula-salad/" },
+      { name: "Arugula Salad", url: "https://www.allrecipes.com/recipe/71600/easy-arugula-salad/" },
       { name: "Chili Lime Baked Trour", url: "https://www.mashed.com/1250928/baked-trout-with-sweet-chili-sauce-recipe/"},
       { name: "Curried spinach, eggs, and chickpeas", url: "https://www.bbcgoodfood.com/recipes/curried-spinach-eggs-chickpeas/"},
       { name: "Egg drop soup", url: "https://thewoksoflife.com/egg-drop-soup/"},
@@ -100,26 +100,38 @@ const recipeData = {
       name: "Black Bean Quesadillas",
       url: "https://www.theyummymuffin.com/single-post/black-bean-quesadilla-nachos",
       moods: [true, false, false, false, false, false, false, false],
-      allergenDiets: [true, true, false, false, false, false, true, true, true, true, false, true, true, true]
+      allergenDiets: [false, false, true, false, false, false, false, false, false, true, true, false, true, true, true]
+    },
+    {
+      name: "3-Ingredient Barbeque Chicken",
+      url: "https://www.simplyrecipes.com/three-ingredient-baked-barbecue-chicken-recipe-8748801 ",
+      moods: [true, false, false, false, false, true, false, false],
+      allergenDiets: [false, false, true, false, false, false, false, false, false, false, false, true, true, true, true]
     },
     {
       name: "Chicken Tenders and Fries",
       url: "https://whereismyspoon.co/chicken-tenders-and-fries/",
       moods: [true, false, false, false, false, false, false, false],
-      allergenDiets: [false, false, true, false, true, false, false, false, false, false, false, false, false, true, true]
+      allergenDiets: [false, false, true, false, true, false, false, false, false, false, false, false, true, true, true]
     },
     {
-      name: "Chocolate Covered Strawberries",
+      name: "Dark Chocolate Covered Strawberries",
       url: "https://www.allrecipes.com/gallery/favorite-dark-chocolate-desserts/",
-      moods: [happy, sad, frustrated, tired, studious, energetic, anxious, nauseous],
-      allergenDiets: [false, false, false, false, false, false, false, false, true, true, true, true, false, true, true]
+      moods: [true, true, false, false, false, false, true, false],
+      allergenDiets: [false, false, false, false, false, false, false, false, true, true, true, true, true, true, true]
     },
     {
       name: "Dark Chocolate Bacon Cupcakes",
       url: "https://www.allrecipes.com/recipe/161019/dark-chocolate-bacon-cupcakes/"
       moods: [true, true, false, false, false, false, true, false],
       allergenDiets: [false, false, true, true, true, false, false, false, false, false, false, false, false, false, false]
-    }
+    },
+    {
+      name: "Dark Chocolate Cake",
+      url: "https://www.allrecipes.com/recipe/7736/dark-chocolate-cake-i/ ",
+      moods: [true, true, false, false, false, false, true, false],
+      allergenDiets: [false, false, false, true, true, false, false, false, false, true, true, false, false, true, true]
+    },
   ]
 
   // functions to sort data and get results
