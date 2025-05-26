@@ -38,3 +38,4 @@ const KOSHER_INDEX = 13;
 const HALAL_INDEX = 14;
 
 //--END OF CONSTANTS--
+
