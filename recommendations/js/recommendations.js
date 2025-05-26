@@ -71,7 +71,7 @@ const recipeData = {
     ]
   };
 
-  /* WIP recipe data
+  /* WIP recipe data - preferably, alphabetical
   
   // how to format objects:
     // each object is a recipe with a name key, url key, moods key, and allergenDiets key
