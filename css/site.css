@@ -140,4 +140,25 @@ background-image: url(../img/SiteBackground.JPG);
       padding: 0.7rem 1.5rem;
     }
   }
+
+  /* Return button styling */
+  .return-button {
+    background: linear-gradient(45deg, #f67280, #f8b195);
+    color: white;
+    box-shadow: 0 6px 15px rgba(246, 114, 128, 0.5);
+    border: none;
+    border-radius: 15px;
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin: 0 0.6rem 1rem 0.6rem;
+  }
+  
+  .return-button:hover {
+    background: linear-gradient(45deg, #f8b195, #f67280);
+    box-shadow: 0 8px 20px rgba(246, 114, 128, 0.7);
+    transform: scale(1.1);
+  }
   

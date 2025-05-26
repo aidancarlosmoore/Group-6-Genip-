@@ -61,7 +61,15 @@ const recipeData = {
     studious: [
       { name: "Roast Beef Lettuce Wrap", url: "https://www.eastewart.com/recipes-and-nutrition/roast-beef-lettuce-wraps/" },
       { name: "Smoked Salmon Sandwich", url: "https://www.eastewart.com/recipes-and-nutrition/smoked-salmon-sandwich/" },
-      { name: "Pumpkin Hummus Wraps", url: "https://www.eastewart.com/recipes-and-nutrition/savory-spiced-pumpkin-hummus-pumpkin-hummus-veggie-wraps-food-as-medicine/" }
+      { name: "Pumpkin Hummus Wraps", url: "https://www.eastewart.com/recipes-and-nutrition/savory-spiced-pumpkin-hummus-pumpkin-hummus-veggie-wraps-food-as-medicine/" },
+      { name: "Aragula Salad", url: "https://www.allrecipes.com/recipe/71600/easy-arugula-salad/" },
+      { name: "Chili Lime Baked Trour", url: "https://www.mashed.com/1250928/baked-trout-with-sweet-chili-sauce-recipe/"},
+      { name: "Curried spinach, eggs, and chickpeas", url: "https://www.bbcgoodfood.com/recipes/curried-spinach-eggs-chickpeas/"},
+      { name: "Egg drop soup", url: "https://thewoksoflife.com/egg-drop-soup/"},
+      { name: "Egg foo yung", url: "https://www.recipetineats.com/egg-foo-young/"},
+      { name: "Indian chickpeas w/ poached eggs", url: "https://www.bbcgoodfood.com/recipes/indian-chickpeas-poached-eggs"},
+      { name: "Summer egg salad w/ basil and peas", url: "https://www.bbcgoodfood.com/recipes/summer-egg-salad-basil-peas"},
+      { name: "Tomato anchovy pasta", url: "https://bevcooks.com/2023/03/tomato-anchovy-pasta/"},
     ],
     nauseous: [
       { name: "Mashed Potatoes", url: "https://www.spendwithpennies.com/how-to-make-mashed-potatoes/" },

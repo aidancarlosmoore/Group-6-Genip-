@@ -127,5 +127,5 @@ $("#submit-button").click(function() {
   localStorage.setItem('selectedMoods', JSON.stringify(selectedMoods));
 
   // Redirect to recommendations page (adjust path if needed)
-  window.location.href = "recommendations/index.html";
+  window.location.href = "../recommendations/index.html";
 });
