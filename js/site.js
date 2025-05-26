@@ -66,7 +66,7 @@ export const recipeData = [0, 1, 2, 3, 4, 5, 6, 7, 8];
 
 //-- INPUT NEW RECIPES AT BOTTOM OF ARRAY HERE --
 /*
-const recipeData = [
+export const recipeData = [
     {
       name: "Sample Recipe Template",
       url: "https://www.google.com",
