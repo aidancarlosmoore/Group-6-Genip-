@@ -179,11 +179,16 @@ const recipeData = {
 
   */
 
+  //below group of code has been slightly modified to now work with the array of booleans rather than strings
   const selectedMoods = JSON.parse(localStorage.getItem('selectedMoods')) || [];
   const outputDiv = document.getElementById('output');
   
-  selectedMoods.forEach(mood => {
-    if (recipeData[mood]) {
+  //bandaid code added so that changing to an arr of booleans works, code to be deleted later
+  const moods = ["happy", "sad", "frustrated", "tired", "studious", "energetic", "anxious", "nauseous"];
+  let temp = 0;
+
+  moods.forEach(mood => {
+    if (selectedMoods[temp]) {
       const moodTitle = document.createElement('h3');
       moodTitle.textContent = `${mood.charAt(0).toUpperCase() + mood.slice(1)}:`;
       outputDiv.appendChild(moodTitle);
@@ -195,6 +200,9 @@ const recipeData = {
         outputDiv.appendChild(card);
       });
     }
+
+    //part of the band-aid code
+    temp++;
   });
   
   
