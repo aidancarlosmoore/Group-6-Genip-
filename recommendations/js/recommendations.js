@@ -113,6 +113,11 @@ const recipeData = {
   const moodsArr = ["happy", "sad", "frustrated", "tired", "studious", "energetic", "anxious", "nauseous"];
   var moodsArrBoolean = [false, false, false, false, false, false, false, false];
 
+  var hasDiet = false;
+  var allergenDietsArrBoolean = [false, false, false, false, false, false, false, false, false, false, false, false, false, false];
+
+  var addRecipe = false;
+
   selectedMoods.forEach(mood => {
     for (i = 0; i < moodsArr.length; i++) {
       if (mood == moodsArr) {
@@ -121,11 +126,28 @@ const recipeData = {
     }
   });
 
+  // insert loop here to check for input allergens and diets, any diets changed to 'true' chances hasDiet to 'true'
+
   for (i = 0; i < moodsArrBoolean.length; i++) {
       recipeData.forEach((element) => {
         if (this.moods[i] == true) {
-          //add current object data as new element in HTML
+          if (hasDiet == true) {
+            // check if recipe meets diets, if yes, set addRecipe to 'true'
+          }
+          else {
+            addRecipe = true;
+          }
+          for (j = 0; j < 8; j++) {
+            if (allergenDietsArrBoolean[j] && this.allergenDiets[j]) {
+              addRecipe = false;
+            }
+          }
         }
+        if (addRecipe = true) {
+          // add current object data as new element in HTML
+        }
+        
+        addRecipe = false;
       })
   };
 
