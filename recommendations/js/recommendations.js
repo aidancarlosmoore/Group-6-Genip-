@@ -80,6 +80,8 @@ const recipeData = {
   };
 
   /* WIP recipe data - preferably, alphabetical
+
+  // !!-- SEE SITE.JS FOR NEW LOCATION OF recipeData --!!
   
   // how to format objects:
     // each object is a recipe with a name key, url key, moods key, and allergenDiets key

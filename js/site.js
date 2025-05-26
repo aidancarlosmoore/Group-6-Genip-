@@ -1,3 +1,7 @@
+//
+// TO BE USED FOR CONSTANTS
+//
+
 
 
 //--CONSTANTS:--
@@ -39,4 +43,93 @@ export const HALAL_INDEX = 14;
 
 //--END OF CONSTANTS--
 
+//RECIPE DATA ARRAY, PREFERABLY ALPHABETICALLY SORTED
+//READ THROUGHOULY BEFORE INPUTTING NEW RECIPES
+  // how to format objects:
+    // each object is a recipe with a name key, url key, moods key, and allergenDiets key
+    // moods value is an array of booleans that follows foods in this order: happy, sad, frustrated, tired, studious, energetic, anxious, nauseous
+      // 'true' means fits in that category, which shows the item on search
+    // allergenDiets value is an array that follows allergens and diets in this order: peanuts, tree nuts, dairy, gluten, eggs, soybeans, sesame, shellfish, vegan, vegetarian, pescetarian, keto, gluten-free, kosher, halal
+      // 'true' for allergens means does contain that allergen, which removes the item on search
+      // 'true' for diets means fits in that category, which shows the item on search
+
+    // TEMPLATE:
+    //   {
+    //   name: "Sample Recipe Template",
+    //   url: "https://www.google.com",
+    //   moods: [happy, sad, frustrated, tired, studious, energetic, anxious, nauseous],
+    //   allergenDiets: [peanuts, tree nuts, dairy, gluten, eggs, soybeans, sesame, shellfish, vegan, vegetarian, pescetarian, keto, gluten-free, kosher, halal]
+    // },
+
+//temporary value, leave for now
 export const recipeData = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+
+//-- INPUT NEW RECIPES AT BOTTOM OF ARRAY HERE --
+/*
+const recipeData = [
+    {
+      name: "Sample Recipe Template",
+      url: "https://www.google.com",
+      moods: [happy, sad, frustrated, tired, studious, energetic, anxious, nauseous],
+      allergenDiets: [peanuts, tree nuts, dairy, gluten, eggs, soybeans, sesame, shellfish, vegan, vegetarian, pescetarian, keto, gluten-free, kosher, halal]
+    },
+    {
+      name: "Black Bean Quesadillas",
+      url: "https://www.theyummymuffin.com/single-post/black-bean-quesadilla-nachos",
+      moods: [true, false, false, false, false, false, false, false],
+      allergenDiets: [false, false, true, false, false, false, false, false, false, true, true, false, true, true, true]
+    },
+    {
+      name: "3-Ingredient Barbeque Chicken",
+      url: "https://www.simplyrecipes.com/three-ingredient-baked-barbecue-chicken-recipe-8748801 ",
+      moods: [true, false, false, false, false, true, false, false],
+      allergenDiets: [false, false, true, false, false, false, false, false, false, false, false, true, true, true, true]
+    },
+    {
+      name: "Chicken Tenders and Fries",
+      url: "https://whereismyspoon.co/chicken-tenders-and-fries/",
+      moods: [true, false, false, false, false, false, false, false],
+      allergenDiets: [false, false, true, false, true, false, false, false, false, false, false, false, true, true, true]
+    },
+    {
+      name: "Dark Chocolate Covered Strawberries",
+      url: "https://www.allrecipes.com/gallery/favorite-dark-chocolate-desserts/",
+      moods: [true, true, false, false, false, false, true, false],
+      allergenDiets: [false, false, false, false, false, false, false, false, true, true, true, true, true, true, true]
+    },
+    {
+      name: "Dark Chocolate Bacon Cupcakes",
+      url: "https://www.allrecipes.com/recipe/161019/dark-chocolate-bacon-cupcakes/"
+      moods: [true, true, false, false, false, false, true, false],
+      allergenDiets: [false, false, true, true, true, false, false, false, false, false, false, false, false, false, false]
+    },
+    {
+      name: "Dark Chocolate Cake",
+      url: "https://www.allrecipes.com/recipe/7736/dark-chocolate-cake-i/ ",
+      moods: [true, true, false, false, false, false, true, false],
+      allergenDiets: [false, false, false, true, true, false, false, false, false, true, true, false, false, true, true]
+    },
+  ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
