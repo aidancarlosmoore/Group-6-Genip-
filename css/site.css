@@ -88,13 +88,13 @@ background-image: url(../img/SiteBackground.JPG);
     background: linear-gradient(45deg, #00f2fe, #4facfe);
   }
   
-  .suprise-me-button {
+  .surprise-me-button {
     background: linear-gradient(45deg, #88d18a, #5ac47c); /* green */
     box-shadow: 0 6px 15px rgba(70, 160, 80, 0.5);
     color: white;
   }
   
-  .suprise-me-button:hover {
+  .surprise-me-button:hover {
     background: linear-gradient(45deg, #5ac47c, #88d18a);
     box-shadow: 0 8px 20px rgba(70, 160, 80, 0.7);
   }
