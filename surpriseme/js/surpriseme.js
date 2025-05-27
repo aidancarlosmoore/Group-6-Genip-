@@ -49,6 +49,53 @@ let randomFood = function(){
     
 };
 
+const allergenDietArr = ["Peanuts", "Tree Nuts", "Dairy", "Gluten", "Eggs", "Soybeans", "Sesame", "Shellfish", "Vegan", "Vegetarian", "Pescetarian", "Keto", "Gluten-Free", "Kosher", "Halal"]
+let parseAllergensDiet = function(arr)
+{
+    let ret = "";
+    for(let i = 0; i < default_value.VEGAN_INDEX; i++)
+    {
+        if(arr[i])
+        {
+            if(!ret)
+            {
+                ret += "May contain these allergens: "+allergenDietArr[i];
+            }
+            else
+            {
+                ret += ", "+allergenDietArr[i];
+            }
+            
+        }
+    }
+    if(!ret)
+    {
+        ret+="May be allergen-free!"
+    }
+    let diet = false;
+    for(let j = default_value.VEGAN_INDEX; j < arr.length; j++)
+    {
+        if(arr[j])
+        {
+            if(!diet)
+            {
+                diet = true;
+                ret += "<br>May fit these dietary restrictions: "+allergenDietArr[j];
+            }
+            else
+            {
+                ret += ", "+allergenDietArr[j];
+            }
+            
+        }
+    }
+    if(!diet)
+    {
+        ret+="<br>May not fit most dietary restrictions.";
+    }
+    return ret;
+}
+
 //function for getting random food and printing it
 let randomize = function()
 {   
@@ -63,7 +110,8 @@ let randomize = function()
     else
     {
         console.log(ret);
-        $("#output").html(`<br><div>${ret}</div><br><div><strong>${generated_array.length}</strong> / ${default_value.recipeData.length} recipes shown</div>`);
+        $("#output").html(ret.name+"<br>Recipe: <a href="+"\""+ret.url+"\">"+ret.url+"</a><br>"+parseAllergensDiet(ret.allergenDiets)+"<br>Make sure to double check for allergens and dietary restrictions or needs!");
+        //$("#output").html(`<br><div>${ret}</div><br><div><strong>${generated_array.length}</strong> / ${default_value.recipeData.length} recipes shown</div>`);
     }
 
 };

@@ -62,17 +62,17 @@ export const HALAL_INDEX = 14;
     // },
 
 //temporary value, leave for now
-export const recipeData = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+//export const recipeData = [0, 1, 2, 3, 4, 5, 6, 7, 8];
 
 //-- INPUT NEW RECIPES AT BOTTOM OF ARRAY HERE --
-/*
+
 export const recipeData = [
-    {
-      name: "Sample Recipe Template",
-      url: "https://www.google.com",
-      moods: [happy, sad, frustrated, tired, studious, energetic, anxious, nauseous],
-      allergenDiets: [peanuts, tree nuts, dairy, gluten, eggs, soybeans, sesame, shellfish, vegan, vegetarian, pescetarian, keto, gluten-free, kosher, halal]
-    },
+    // {
+    //   name: "Sample Recipe Template",
+    //   url: "https://www.google.com",
+    //   moods: [happy, sad, frustrated, tired, studious, energetic, anxious, nauseous],
+    //   allergenDiets: [peanuts, tree nuts, dairy, gluten, eggs, soybeans, sesame, shellfish, vegan, vegetarian, pescetarian, keto, gluten-free, kosher, halal]
+    // },
     {
       name: "Arugula Salad",
       url: "https://www.wellplated.com/anytime-arugula-salad/",
@@ -177,7 +177,7 @@ export const recipeData = [
     },
     {
       name: "Dark Chocolate Bacon Cupcakes",
-      url: "https://www.allrecipes.com/recipe/161019/dark-chocolate-bacon-cupcakes/"
+      url: "https://www.allrecipes.com/recipe/161019/dark-chocolate-bacon-cupcakes/",
       moods: [true, true, false, false, false, false, true, false],
       allergenDiets: [false, false, true, true, true, false, false, false, false, false, false, false, false, false, false]
     },
@@ -227,7 +227,7 @@ export const recipeData = [
       name: "Farro Salad with Blue Cheese, Pine Nuts, and Tomatoes",
       url: "https://www.seriouseats.com/farro-salad-with-blue-cheese-pine-nuts-and-tomatoes-recipe",
       moods: [false, false, false, false, true, true, false, false],
-      allergenDiets: [peanuts, tree nuts, dairy, gluten, eggs, soybeans, sesame, shellfish, vegan, vegetarian, pescetarian, keto, gluten-free, kosher, halal]
+      allergenDiets: [false, true, true, true, false, false, false, false, false, true, true, false, false, true, true]
     },
     {
       name: "Four-Ingredient Chicken Salad",
@@ -338,7 +338,7 @@ export const recipeData = [
       allergenDiets: [false, false, false, false, false, false, false, false, false, false, true, true, true, true, true]
     },
     {
-      name: "Oven Roasted Mackerel,
+      name: "Oven Roasted Mackerel",
       url: "https://www.themediterraneandish.com/oven-roasted-spanish-mackerel/",
       moods: [false, true, true, false, true, true, false, false],
       allergenDiets: [false, false, false, false, false, false, false, false, false, false, true, true, true, true, true]
@@ -442,7 +442,7 @@ export const recipeData = [
     {
       name: "Spicy Peanut Noodles",
       url: "https://www.foodnetwork.com/recipes/food-network-kitchen/spicy-peanut-noodles-11933499",
-      moods: [false, false, falsse, true, false, false, false, false],
+      moods: [false, false, false, true, false, false, false, false],
       allergenDiets: [true, true, false, true, false, true, true, false, false, true, true, false, false, true, true]
     },
     {
@@ -452,7 +452,7 @@ export const recipeData = [
       allergenDiets: [false, false, false, false, false, false, false, true, false, false, true, true, true, false, false]
     },
     {
-      name: "Summer Egg Salad with Basil and Peas,
+      name: "Summer Egg Salad with Basil and Peas",
       url: "https://www.bbcgoodfood.com/recipes/summer-egg-salad-basil-peas",
       moods: [false, false, true, true, true, true, true, false],
       allergenDiets: [false, false, false, false, true, false, false, false, false, true, true, true, true, true, true]
@@ -547,4 +547,4 @@ export const recipeData = [
 
 
 
-*/
+
