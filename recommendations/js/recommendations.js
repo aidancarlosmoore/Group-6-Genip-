@@ -1,5 +1,10 @@
 // recommendations/script.js
 
+//import all constants from site.js
+import * as default_value from "../../js/site.js";
+
+/* obsolete data - all recipes are now found in main site.js
+
 const recipeData = {
     happy: [
       { name: "Sushi", url: "https://www.google.com/search?q=sushi+near+me" },
@@ -79,7 +84,7 @@ const recipeData = {
     ]
   };
 
-  /* WIP recipe data - preferably, alphabetical
+    WIP recipe data - preferably, alphabetical
 
   // !!-- SEE SITE.JS FOR NEW LOCATION OF recipeData --!!
   
@@ -138,48 +143,97 @@ const recipeData = {
 
   // functions to sort data and get results
 
-  const moodsArr = ["happy", "sad", "frustrated", "tired", "studious", "energetic", "anxious", "nauseous"];
-  var moodsArrBoolean = [false, false, false, false, false, false, false, false];
+  // const moodsArr = ["happy", "sad", "frustrated", "tired", "studious", "energetic", "anxious", "nauseous"];
+  // var moodsArrBoolean = [false, false, false, false, false, false, false, false]; */
 
+  // grab local storage arrays
+  const selectedMoods = JSON.parse(localStorage.getItem('selectedMoods')) || [];
+  const selectedDiets = JSON.parse(localStorage.getItem('selected_allergens_diet')) || [];
+
+  const outputDiv = document.getElementById('output');
+
+  // boolean checkers
+  var hasAllergen = false;
   var hasDiet = false;
-  var allergenDietsArrBoolean = [false, false, false, false, false, false, false, false, false, false, false, false, false, false];
-
+  var newMood = true;
   var addRecipe = false;
 
-  selectedMoods.forEach(mood => {
-    for (i = 0; i < moodsArr.length; i++) {
-      if (mood == moodsArr) {
-        moodsArrBoolean[i] = true;
+  //check if there's an allergy or diet
+  for (var i = 0; i < selectedDiets.length; i++) {
+    if (selectedDiets[i] == true) {
+      if (i < 8) {
+        hasAllergen = true;
+      }
+      if (i >= 8) {
+        hasDiet = true;
       }
     }
-  });
+  }
 
-  // insert loop here to check for input allergens and diets, any diets changed to 'true' chances hasDiet to 'true'
+  for (var i = 0; i < selectedMoods.length; i++) {
+    default_value.recipeData.forEach(recipe => {
 
-  for (i = 0; i < moodsArrBoolean.length; i++) {
-      recipeData.forEach((element) => {
-        if (this.moods[i] == true) {
-          if (hasDiet == true) {
-            // check if recipe meets diets, if yes, set addRecipe to 'true'
-          }
-          else {
-            addRecipe = true;
-          }
-          for (j = 0; j < 8; j++) {
-            if (allergenDietsArrBoolean[j] && this.allergenDiets[j]) {
-              addRecipe = false;
+        // check for matching mood
+        if (selectedMoods[i] && recipe.moods[i]) {
+
+          addRecipe = true;
+
+          if (hasAllergen) {
+
+            //check if recipe meets allergens; any selected all
+            for (var j = 0; j < 8; j++) {
+              if (selectedDiets[j] && recipe.allergenDiets[j]) {
+                addRecipe = false;
+
+                //end loop
+                //break;
+              }
             }
           }
+          
+          if (hasDiet) {
+            
+          // check if recipe meets diets; any selected diet with a 'false' diet sets addRecipe to 'false'
+            for (var j = 8; j < selectedDiets.length; j++) {
+              if (selectedDiets[j] && !recipe.allergenDiets[j]) {
+                addRecipe = false;
+
+                //end loop
+                //break;
+              }
+            }
+          }
+          
         }
-        if (addRecipe = true) {
+        if (addRecipe) {
+
+          // create new header if newMood is 'true'
+          if (newMood) {
+            const moods = ["Happy", "Sad", "Frustrated", "Tired", "Studious", "Energetic", "Anxious", "Nauseous"];
+            const moodTitle = document.createElement('h3');
+            moodTitle.textContent = `${moods[i]}:`;
+            outputDiv.appendChild(moodTitle);
+            newMood = false;
+          }
+
           // add current object data as new element in HTML
+          // recipeData[mood].forEach(recipe => {
+            const card = document.createElement('div');
+            card.className = 'recipe-card';
+            card.innerHTML = `<h4>${recipe.name}</h4><a href="${recipe.url}" target="_blank">View Recipe</a>`;
+            outputDiv.appendChild(card);
+          // });
         }
         
+        //reset checker
         addRecipe = false;
-      })
+    });
+
+    //reset checker
+    newMood = true;
   };
 
-  */
+  /* old function - not necessary anymore
 
   //below group of code has been slightly modified to now work with the array of booleans rather than strings
   const selectedMoods = JSON.parse(localStorage.getItem('selectedMoods')) || [];
@@ -207,4 +261,4 @@ const recipeData = {
     temp++;
   });
   
-  
+  */

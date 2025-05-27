@@ -465,7 +465,7 @@ export const recipeData = [
     },
     {
       name: "Three-Ingredient Barbeque Chicken",
-      url: "https://www.simplyrecipes.com/three-ingredient-baked-barbecue-chicken-recipe-8748801 ",
+      url: "https://www.simplyrecipes.com/three-ingredient-baked-barbecue-chicken-recipe-8748801",
       moods: [true, false, false, false, false, true, false, false],
       allergenDiets: [false, false, true, false, false, false, false, false, false, false, false, true, true, true, true]
     },
