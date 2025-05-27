@@ -1,4 +1,10 @@
 .surprise-again-button{
-    width: 15%;
+    
     font-size: x-large;
+}
+#content{
+    align-self: center;
+    text-align: center;
+    vertical-align: middle;
+    align-items: center;
 }
