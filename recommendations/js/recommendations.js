@@ -73,20 +73,25 @@ const recipeData = {
   
   const selectedMoods = JSON.parse(localStorage.getItem('selectedMoods')) || [];
   const outputDiv = document.getElementById('output');
+  outputDiv.innerHTML = ''; 
   
-  selectedMoods.forEach(mood => {
-    if (recipeData[mood]) {
-      const moodTitle = document.createElement('h3');
-      moodTitle.textContent = `${mood.charAt(0).toUpperCase() + mood.slice(1)}:`;
-      outputDiv.appendChild(moodTitle);
+  if (selectedMoods.length === 0) {
+    outputDiv.innerHTML = '<p>No moods selected. Please go back and select your mood.</p>';
+  } else {
+    selectedMoods.forEach(mood => {
+      if (recipeData[mood]) {
+        const moodTitle = document.createElement('h3');
+        moodTitle.textContent = `${mood.charAt(0).toUpperCase() + mood.slice(1)}:`;
+        outputDiv.appendChild(moodTitle);
   
-      recipeData[mood].forEach(recipe => {
-        const card = document.createElement('div');
-        card.className = 'recipe-card';
-        card.innerHTML = `<h4>${recipe.name}</h4><a href="${recipe.url}" target="_blank">View Recipe</a>`;
-        outputDiv.appendChild(card);
-      });
-    }
-  });
+        recipeData[mood].forEach(recipe => {
+          const card = document.createElement('div');
+          card.className = 'recipe-card';
+          card.innerHTML = `<h4>${recipe.name}</h4><a href="${recipe.url}" target="_blank">View Recipe</a>`;
+          outputDiv.appendChild(card);
+        });
+      }
+    });
+  }
   
   
