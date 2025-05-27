@@ -1,14 +1,14 @@
 
 //import all constants from site.js
 import * as default_value from "../../js/site.js";
-console.log(default_value.recipeData);
+//console.log(default_value.recipeData);
 
 //initialize an array to store what indexies have been printed
 let generated_array=[];
 
 //function for getting a random food
 let randomFood = function(){
-    
+
     // console.log("generating random number "+generated_array);
 
     //generate a random value from 0 to len-1 of recipe data
@@ -58,10 +58,12 @@ let randomize = function()
     if(ret === null)
     {
         console.log("You've looked through all the foods lol");
+        $("#output").html("<br><div>You've looked through all the foods lol</div><br>");
     }
     else
     {
         console.log(ret);
+        $("#output").html(`<br><div>${ret}</div><br><div><strong>${generated_array.length}</strong> / ${default_value.recipeData.length} recipes shown</div>`);
     }
 
 };
