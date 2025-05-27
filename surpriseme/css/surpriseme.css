@@ -1,10 +1,139 @@
-.surprise-again-button{
-    
-    font-size: x-large;
-}
-#content{
-    align-self: center;
-    text-align: center;
-    vertical-align: middle;
+/* Reset and base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ff9aa2, #ffb347, #9ad1d4, #88d18a);
+    display: flex;
+    justify-content: center;
     align-items: center;
-}
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2a2a2a;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  main#content {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 900px;
+    padding: 3rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #d6336c;
+    text-shadow: 1px 1px 3px rgba(255, 182, 193, 0.8);
+  }
+  
+  .minor-section h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #f9d71c;
+    margin-bottom: 1rem;
+  }
+  
+  button {
+    background: linear-gradient(45deg, #4facfe, #00f2fe);
+    border: none;
+    border-radius: 15px;
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(0, 127, 255, 0.5);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin: 0.6rem;
+  }
+  
+  button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 127, 255, 0.7);
+  }
+  
+  /* buttons to make pretty */
+  
+  .main-page-button {
+    background: linear-gradient(45deg, #f67280, #f8b195);
+    box-shadow: 0 6px 15px rgba(246, 114, 128, 0.5);
+  }
+  
+  .main-page-button:hover {
+    background: linear-gradient(45deg, #f8b195, #f67280);
+    box-shadow: 0 8px 20px rgba(246, 114, 128, 0.7);
+  }
+  
+  .surprise-again-button {
+    background: linear-gradient(45deg, #88d18a, #5ac47c);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 0.8rem 2rem;
+    width: fit-content;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(70, 160, 80, 0.5);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin: 1rem auto;
+    display: block;
+  }
+  
+  .surprise-again-button:hover {
+    background: linear-gradient(45deg, #5ac47c, #88d18a);
+    box-shadow: 0 8px 20px rgba(70, 160, 80, 0.7);
+    transform: scale(1.1);
+  }
+  
+  /* nav links */
+  nav#links {
+    display: flex;
+    justify-content: center;
+    gap: 1.4rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+  
+  nav#links a {
+    text-decoration: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 12px;
+    font-weight: 700;
+    color: #d6336c;
+    background: #fff0f6;
+    box-shadow: 0 6px 12px rgba(214, 51, 108, 0.3);
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  }
+  
+  nav#links a:hover {
+    background: #d6336c;
+    color: white;
+    transform: scale(1.1);
+  }
+  
+  /* making it responsive */
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    .minor-section h2 {
+      font-size: 1.4rem;
+    }
+  
+    button {
+      font-size: 1rem;
+      padding: 0.7rem 1.5rem;
+    }
+  }

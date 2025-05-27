@@ -63,7 +63,7 @@ let randomize = function()
     else
     {
         console.log(ret);
-        $("#output").html("<br><div>"+ret+"</div><br>");
+        $("#output").html(`<br><div>${ret}</div><br><div><strong>${generated_array.length}</strong> / ${default_value.recipeData.length} recipes shown</div>`);
     }
 
 };
