@@ -27,7 +27,11 @@ const recipeData = {
       { name: "Chicken Noodle Soup", url: "https://www.foodnetwork.com/recipes/tyler-florence/chicken-noodle-soup-recipe0-1941332" },
       { name: "Ice Cream", url: "https://www.google.com/maps/search/ice+cream+near+me/" },
       { name: "Fruit Platter", url: "https://www.google.com/maps/search/fruit+market+near+me/" },
-      { name: "Banana Bread w/ Chocolate Chips", url: "https://natashaskitchen.com/chocolate-chip-banana-bread/" }
+      { name: "Banana Bread w/ Chocolate Chips", url: "https://natashaskitchen.com/chocolate-chip-banana-bread/" },
+      { name: "Tomato Anchovy Pasta", url: "https://bevcooks.com/2023/03/tomato-anchovy-pasta/" },
+      { name: "Oven Roasted Mackerel", url: "https://www.themediterraneandish.com/oven-roasted-spanish-mackerel/" },
+      { name: "Chili Lime Baked Trout", url: "https://downshiftology.com/recipes/chili-lime-baked-trout/" },
+      { name: "Killer Crack Salmon Muffins", url: "https://hungryhappens.net/killer-crack-salmon-muffins/" }
     ],
     tired: [
       { name: "Ham & Potato Soup", url: "https://www.simplyrecipes.com/recipes/ham_and_potato_soup/" },
@@ -36,38 +40,83 @@ const recipeData = {
       { name: "Paprika Chicken with Potatoes", url: "https://www.simplyrecipes.com/recipes/one_pan_paprika_chicken_with_potatoes_and_tomatoes/" },
       { name: "Spicy Shrimp with Rice", url: "https://www.tasteofhome.com/recipes/spicy-shrimp-with-rice/" },
       { name: "Ginger Beef Stir-Fry", url: "https://www.tasteofhome.com/recipes/ginger-beef-stir-fry/" },
-      { name: "Brazilian Pork & Black Bean Stew", url: "https://www.tasteofhome.com/recipes/brazilian-pork-black-bean-stew/" }
+      { name: "Brazilian Pork & Black Bean Stew", url: "https://www.tasteofhome.com/recipes/brazilian-pork-black-bean-stew/" },
+      { name: "Chili Verde", url: "https://www.tasteofhome.com/recipes/easy-chili-verde/" },
+      { name: "Ginger Beef Stir-Fry", url: "https://www.tasteofhome.com/recipes/ginger-beef-stir-fry/" },
+      { name: "Brazilian Pork and Black Bean Stew", url: "https://www.tasteofhome.com/recipes/brazilian-pork-black-bean-stew/" },
+      { name: "Tropical Sweet and Spicy Pork Tenderloin", url: "https://www.tasteofhome.com/recipes/tropical-sweet-and-spicy-pork-tenderloin/" },
+      { name: "Chicken Noodle Soup", url: "https://www.foodnetwork.com/recipes/tyler-florence/chicken-noodle-soup-recipe0-1941332" },
+      { name: "Soy Sauce Chow Shrimp Egg Noodles", url: "https://www.foodnetwork.com/recipes/soy-sauce-chow-shrimp-egg-noodles-12165632" }
     ],
     frustrated: [
       { name: "Egg Drop Soup", url: "https://thewoksoflife.com/egg-drop-soup/" },
       { name: "Tomato Anchovy Pasta", url: "https://bevcooks.com/2023/03/tomato-anchovy-pasta/" },
       { name: "Turkey, Strawberry, Avocado Salad", url: "https://www.bbcgoodfood.com/recipes/turkey-strawberry-avocado-salad" },
       { name: "Chipotle Turkey Grain Bowl", url: "https://www.bbcgoodfood.com/recipes/chipotle-turkey-avocado-grain-bowl" },
-      { name: "Miso Salmon", url: "https://www.wellplated.com/miso-salmon/" }
+      { name: "Miso Salmon", url: "https://www.wellplated.com/miso-salmon/" },
+      { name: "Ramen Soup", url: "https://thecozycook.com/homemade-ramen/" },
+      { name: "Summer Egg Salad with Basil and Peas", url: "https://www.bbcgoodfood.com/recipes/summer-egg-salad-basil-peas" },
+      { name: "Curried Spinach, Eggs and Chickpeas", url: "https://www.bbcgoodfood.com/recipes/curried-spinach-eggs-chickpeas" },
+      { name: "Ultimate Quiche Lorraine", url: "https://www.bbcgoodfood.com/recipes/ultimate-quiche-lorraine" },
+      { name: "Egg Fried Noodles with Bean Sprouts", url: "https://www.bbcgoodfood.com/recipes/egg-fried-noodles-with-beansprouts" },
+      { name: "Ricotta, Broccoli and New Potato Frittata", url: "https://www.bbcgoodfood.com/recipes/ricotta-broccoli-new-potato-frittata" },
+      { name: "Egg Foo Yung", url: "https://www.bbcgoodfood.com/recipes/egg-foo-yung" },
+      { name: "Indian Chickpeas with Poached Eggs", url: "https://www.bbcgoodfood.com/recipes/indian-chickpeas-poached-eggs" }
     ],
     energetic: [
       { name: "Whole-Grain Spelt Salad", url: "https://www.seriouseats.com/whole-grain-spelt-salad-leeks-recipe" },
       { name: "Bulgur Salad w/ Apricots", url: "https://www.seriouseats.com/bulgur-salad-with-apricots-radicchio-herbs-walnuts-recipe" },
       { name: "Warm Couscous Salad w/ Salmon", url: "https://www.seriouseats.com/couscous-salad-salmon-mustard-dill-recipe" },
       { name: "Quinoa Salad", url: "https://www.seriouseats.com/make-ahead-quinoa-salad-cucumber-tomato-parsley-mint-recipe" },
-      { name: "Fruit Platter", url: "https://www.google.com/maps/search/fruit+platter+near+me/" }
+      { name: "Fruit Platter", url: "https://www.google.com/maps/search/fruit+platter+near+me/" },
+      { name: "Turkey, Strawberry and Avocado Salad", url: "https://www.bbcgoodfood.com/recipes/turkey-strawberry-avocado-salad" },
+      { name: "Chipotle Turkey and Avocado Grain Bowl", url: "https://www.bbcgoodfood.com/recipes/chipotle-turkey-avocado-grain-bowl" },
+      { name: "Turkey Tabbouleh", url: "https://www.bbcgoodfood.com/recipes/turkey-tabbouleh" },
+      { name: "Garlic Knot Chicken Breasts", url: "https://www.simplyrecipes.com/garlic-knot-chicken-breasts-recipe-8698944" },
+      { name: "3-Ingredient Baked BBQ Chicken", url: "https://www.simplyrecipes.com/three-ingredient-baked-barbecue-chicken-recipe-8748801" },
+      { name: "Tuscan-Style Chicken Thighs", url: "https://www.simplyrecipes.com/tuscan-style-chicken-thighs-recipe-8771558" },
+      { name: "4-Ingredient Chicken Salad", url: "https://www.simplyrecipes.com/four-ingredient-chicken-salad-recipe-8774599" },
+      { name: "Honey-Soy Chicken", url: "https://www.simplyrecipes.com/honey-soy-chicken-recipe-8698321" },
+      { name: "Lemon Pepper Chicken Breasts", url: "https://www.simplyrecipes.com/lemon-pepper-chicken-breasts-recipe-6828643" }
+      
     ],
     anxious: [
       { name: "Dark Chocolate Mousse", url: "https://www.allrecipes.com/recipe/235799/chef-johns-dark-chocolate-mousse/" },
       { name: "Gluten-Free Chocolate Cupcakes", url: "https://www.allrecipes.com/recipe/245571/gluten-free-dark-chocolate-cupcakes/" },
       { name: "Quick Beef Pho", url: "https://www.foodnetwork.com/recipes/quick-beef-pho-7112948" },
-      { name: "Savory Oatmeal", url: "https://www.eastewart.com/recipes-and-nutrition/savory-oatmeal-gluten-free/" }
+      { name: "Savory Oatmeal", url: "https://www.eastewart.com/recipes-and-nutrition/savory-oatmeal-gluten-free/" },
+      { name: "Arugula Salad", url: "https://www.wellplated.com/anytime-arugula-salad/" },
+      { name: "Summer Egg Salad with Basil and Peas", url: "https://www.bbcgoodfood.com/recipes/summer-egg-salad-basil-peas" },
+      { name: "Curried Spinach, Eggs and Chickpeas", url: "https://www.bbcgoodfood.com/recipes/curried-spinach-eggs-chickpeas" },
+      { name: "Ultimate Quiche Lorraine", url: "https://www.bbcgoodfood.com/recipes/ultimate-quiche-lorraine" },
+      { name: "Egg Fried Noodles with Bean Sprouts", url: "https://www.bbcgoodfood.com/recipes/egg-fried-noodles-with-beansprouts" },
+      { name: "Ricotta, Broccoli and New Potato Frittata", url: "https://www.bbcgoodfood.com/recipes/ricotta-broccoli-new-potato-frittata" },
+      { name: "Egg Foo Yung", url: "https://www.bbcgoodfood.com/recipes/egg-foo-yung" },
+      { name: "Indian Chickpeas with Poached Eggs", url: "https://www.bbcgoodfood.com/recipes/indian-chickpeas-poached-eggs" },
+      { name: "Egg Drop Soup", url: "https://thewoksoflife.com/egg-drop-soup/" }
     ],
     studious: [
       { name: "Roast Beef Lettuce Wrap", url: "https://www.eastewart.com/recipes-and-nutrition/roast-beef-lettuce-wraps/" },
       { name: "Smoked Salmon Sandwich", url: "https://www.eastewart.com/recipes-and-nutrition/smoked-salmon-sandwich/" },
-      { name: "Pumpkin Hummus Wraps", url: "https://www.eastewart.com/recipes-and-nutrition/savory-spiced-pumpkin-hummus-pumpkin-hummus-veggie-wraps-food-as-medicine/" }
+      { name: "Pumpkin Hummus Wraps", url: "https://www.eastewart.com/recipes-and-nutrition/savory-spiced-pumpkin-hummus-pumpkin-hummus-veggie-wraps-food-as-medicine/" },
+      { name: "Savory Oatmeal with Arugula, Eggs, Tomato, and Avocado", url: "https://www.eastewart.com/recipes-and-nutrition/savory-oatmeal-gluten-free/" },
+      { name: "Spicy Kale and Swiss Chard Saute", url: "https://www.eastewart.com/recipes-and-nutrition/migraine-diet-plan-kale-chard-saute/" },
+      { name: "Smoked Salmon and Leafy Greens Sandwich", url: "https://www.eastewart.com/recipes-and-nutrition/smoked-salmon-sandwich/" },
+      { name: "Whole-Grain Spelt Salad with Leeks and Marinated Mushrooms", url: "https://www.seriouseats.com/whole-grain-spelt-salad-leeks-recipe" },
+      { name: "Bulgur Salad with Apricots, Radicchio, Herbs, and Walnuts", url: "https://www.seriouseats.com/bulgur-salad-with-apricots-radicchio-herbs-walnuts-recipe" },
+      { name: "Warm Couscous Salad with Salmon and Mustard-Dill Dressing", url: "https://www.seriouseats.com/couscous-salad-salmon-mustard-dill-recipe" },
+      { name: "Farro Salad with Blue Cheese, Pine Nuts, and Tomatoes", url: "https://www.seriouseats.com/farro-salad-with-blue-cheese-pine-nuts-and-tomatoes-recipe" }
+
     ],
     nauseous: [
       { name: "Mashed Potatoes", url: "https://www.spendwithpennies.com/how-to-make-mashed-potatoes/" },
       { name: "Plain Baked Chicken", url: "https://www.allrecipes.com/recipe/240208/simple-baked-chicken-breasts/" },
       { name: "Greek Yogurt w/ Oats", url: "https://www.google.com/search?q=greek+yogurt+with+oats+recipe" },
-      { name: "Plain Rice", url: "https://www.google.com/search?q=how+to+make+plain+rice" }
+      { name: "Plain Rice", url: "https://www.google.com/search?q=how+to+make+plain+rice" },
+      { name: "Fruit Jello", url:"https://www.yalemedicine.org/nutrition/fruity-gelatin"},
+      { name: "Green Tea", url:"https://www.vegrecipesofindia.com/green-tea-green-tea-with-tulsi/"},
+      { name: "Banana"}
+
     ]
   };
 
