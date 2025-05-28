@@ -45,101 +45,37 @@ let inverse = function(index, id, color){
   ;
 };
 
-// Creates an event listener that updates the emotion Booleans in the array based on user clicks, as well as the button's color
+// Creates an event listener that updates the emotion Booleans in the array based on user clicks, as well as the button's color by calling inverse()
 $("#happy-button").click(function() {
   inverse(default_values.HAPPY_INDEX, "happy-button","#D7DA3F");
-  // if (emotionsArray[default_values.HAPPY_INDEX]) {
-  //   emotionsArray[default_values.HAPPY_INDEX] = false;
-  //   document.getElementById("happy-button").style.backgroundColor='#4dabf7';
-  // }
-  // else {
-  //   emotionsArray[default_values.HAPPY_INDEX] = true;
-  //   document.getElementById("happy-button").style.backgroundColor='#D7DA3F';
-  // }
 });
 
 $("#sad-button").click(function() {
   inverse(default_values.SAD_INDEX,"sad-button","#0369C2");
-  // if (emotionsArray[default_values.SAD_INDEX]) {
-  //   emotionsArray[default_values.SAD_INDEX] = false;
-  //   document.getElementById("sad-button").style.backgroundColor='#4dabf7';
-  // }
-  // else {
-  //   emotionsArray[default_values.SAD_INDEX] = true;
-  //   document.getElementById("sad-button").style.backgroundColor='#0369C2';
-  // }
 });
 
 $("#frustrated-button").click(function() {
   inverse(default_values.FRUSTRATED_INDEX,"frustrated-button","#F2393D");
-  // if (emotionsArray[default_values.FRUSTRATED_INDEX]) {
-  //   emotionsArray[default_values.FRUSTRATED_INDEX] = false;
-  //   document.getElementById("frustrated-button").style.backgroundColor='#4dabf7';
-  // }
-  // else {
-  //   emotionsArray[default_values.FRUSTRATED_INDEX] = true;
-  //   document.getElementById("frustrated-button").style.backgroundColor='#F2393D';
-  // }
 });
 
 $("#tired-button").click(function() {
   inverse(default_values.TIRED_INDEX,"tired-button","#8680C6");
-  // if (emotionsArray[default_values.TIRED_INDEX]) {
-  //   emotionsArray[default_values.TIRED_INDEX] = false;
-  //   document.getElementById("tired-button").style.backgroundColor='#4dabf7';
-  // }
-  // else {
-  //   emotionsArray[default_values.TIRED_INDEX] = true;
-  //   document.getElementById("tired-button").style.backgroundColor='#8680C6';
-  // }
 });
 
 $("#studious-button").click(function() {
   inverse(default_values.STUDIOUS_INDEX,"studious-button","#50B8B7");
-  // if (emotionsArray[default_values.STUDIOUS_INDEX]) {
-  //   emotionsArray[default_values.STUDIOUS_INDEX] = false;
-  //   document.getElementById("studious-button").style.backgroundColor='#4dabf7';
-  // }
-  // else {
-  //   emotionsArray[default_values.STUDIOUS_INDEX] = true;
-  //   document.getElementById("studious-button").style.backgroundColor='#50B8B7';
-  // }
 });
 
 $("#energetic-button").click(function() {
   inverse(default_values.ENERGETIC_INDEX,"energetic-button","#FF76B4");
-  // if (emotionsArray[default_values.ENERGETIC_INDEX]) {
-  //   emotionsArray[default_values.ENERGETIC_INDEX] = false;
-  //   document.getElementById("energetic-button").style.backgroundColor='#4dabf7';
-  // }
-  // else {
-  //   emotionsArray[default_values.ENERGETIC_INDEX] = true;
-  //   document.getElementById("energetic-button").style.backgroundColor='#FF76B4';
-  // }
 });
 
 $("#anxious-button").click(function() {
   inverse(default_values.ANXIOUS_INDEX,"anxious-button","#FF7F00");
-  // if (emotionsArray[default_values.ANXIOUS_INDEX]) {
-  //   emotionsArray[default_values.ANXIOUS_INDEX] = false;
-  //   document.getElementById("anxious-button").style.backgroundColor='#4dabf7';
-  // }
-  // else {
-  //   emotionsArray[default_values.ANXIOUS_INDEX] = true;
-  //   document.getElementById("anxious-button").style.backgroundColor='#FF7F00';
-  // }
 });
 
 $("#nauseous-button").click(function() {
   inverse(default_values.NAUSEOUS_INDEX,"nauseous-button","#4DBE46");
-  // if (emotionsArray[default_values.NAUSEOUS_INDEX]) {
-  //   emotionsArray[default_values.NAUSEOUS_INDEX] = false;
-  //   document.getElementById("nauseous-button").style.backgroundColor='#4dabf7';
-  // }
-  // else {
-  //   emotionsArray[default_values.NAUSEOUS_INDEX] = true;
-  //   document.getElementById("nauseous-button").style.backgroundColor='#4DBE46';
-  // }
 });
 
 // Map of moods to indices (to align with emotionsArray order)
@@ -147,14 +83,7 @@ $("#nauseous-button").click(function() {
 
 // When user clicks "Submit" (make sure your button has id="submit-button")
 $("#submit-button").click(function() {
-  // Collect moods that are true in emotionsArray
-  // let selectedMoods = [];
-  // emotionsArray.forEach((selected, index) => {
-  //   if (selected) {
-  //     selectedMoods.push(moods[index]);
-  //   }
-  // });
-
+  //See if user has selected any moods
   if (JSON.stringify(emotionsArray) === JSON.stringify([false, false, false, false, false, false, false, false])) {
     alert("Please select at least one mood before submitting.");
     return;
@@ -163,6 +92,7 @@ $("#submit-button").click(function() {
   // Save selected moods to localStorage
   localStorage.setItem('selectedMoods', JSON.stringify(emotionsArray));
   console.log(localStorage.getItem('selectedMoods'));
+  
   // Redirect to recommendations page (adjust path if needed)
   window.location.href = "../recommendations/index.html";
 });

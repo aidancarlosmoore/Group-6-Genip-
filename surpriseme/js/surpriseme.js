@@ -3,10 +3,19 @@
 import * as default_value from "../../js/site.js";
 //console.log(default_value.recipeData);
 
+//CONSTANTS 
+//initialize a constant for the word translation of what the boolean array represents, for use in parseAllergensDiet
+const allergenDietArr = ["Peanuts", "Tree Nuts", "Dairy", "Gluten", "Eggs", "Soybeans", "Sesame", "Shellfish", "Vegan", "Vegetarian", "Pescetarian", "Keto", "Gluten-Free", "Kosher", "Halal"]
+
+//VARIABLES
 //initialize an array to store what indexies have been printed
 let generated_array=[];
 
+
+//FUNCTIONS
 //function for getting a random food
+//call with randomFood()
+//takes in no parameters and returns a food object from recipeData[]
 let randomFood = function(){
 
     // console.log("generating random number "+generated_array);
@@ -49,18 +58,25 @@ let randomFood = function(){
     
 };
 
-const allergenDietArr = ["Peanuts", "Tree Nuts", "Dairy", "Gluten", "Eggs", "Soybeans", "Sesame", "Shellfish", "Vegan", "Vegetarian", "Pescetarian", "Keto", "Gluten-Free", "Kosher", "Halal"]
+
+//given an arr of booleans, this will return a text-based representation of what allergens and diets the food fits/doesnt fit
+//call with parseAllergensDiet(input_array) where input_array is an array of booleans exactly 15 in length
+//returns a string with a list of allergens and diets that the input_array corresponds to, formatted to fit html
 let parseAllergensDiet = function(arr)
 {
+    //similar to fizzbuzz, initialize an empty string
     let ret = "";
+    //each time we find an allergen, we add it to the list
     for(let i = 0; i < default_value.VEGAN_INDEX; i++)
     {
         if(arr[i])
         {
+            //if its the first allergen we find, we add some text
             if(!ret)
             {
                 ret += "May contain these allergens: "+allergenDietArr[i];
             }
+            //if its not the first, we just apppend the next allergen
             else
             {
                 ret += ", "+allergenDietArr[i];
@@ -68,11 +84,17 @@ let parseAllergensDiet = function(arr)
             
         }
     }
+
+    //if theres no allergens, add that text accordingly
     if(!ret)
     {
         ret+="May be allergen-free!"
     }
+
+    //bool tracker, as we cant use the emptiness of the string anymore
     let diet = false;
+
+    //loop through each diet and if it matches, we print as such
     for(let j = default_value.VEGAN_INDEX; j < arr.length; j++)
     {
         if(arr[j])
@@ -93,10 +115,15 @@ let parseAllergensDiet = function(arr)
     {
         ret+="<br>May not fit most dietary restrictions.";
     }
+
+    //return our completed string
     return ret;
-}
+};
+
 
 //function for getting random food and printing it
+//call with randomize()
+//returns nothing, but changes the html of the site to show the food we randomized
 let randomize = function()
 {   
     //randomize to a food
@@ -116,6 +143,7 @@ let randomize = function()
 
 };
 
+//CODE:
 //randomize when the user first loads here
 randomize();
 
