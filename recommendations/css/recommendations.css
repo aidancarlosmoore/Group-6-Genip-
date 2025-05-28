@@ -68,4 +68,17 @@
     text-align: center;
   }
   
-  
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ff9aa2, #ffb347, #9ad1d4, #88d18a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2a2a2a;
+    padding: 2rem;
+    
+}
+.recommendations-header{
+  text-align: center;
+}

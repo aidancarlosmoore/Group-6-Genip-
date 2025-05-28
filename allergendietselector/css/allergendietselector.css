@@ -1,6 +1,26 @@
 .allergen-checkboxes{
-    background-color: orange;
+    columns: 2;
+    background-color: rgb(252, 222, 166);
+    border-radius: 5px;
 }
 .diet-checkboxes{
-    background-color: green;
+    columns: 2;
+    background-color: rgb(154, 219, 154);
+    border-radius: 5px;
+}
+main
+{
+    text-align: center;
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ff9aa2, #ffb347, #9ad1d4, #88d18a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2a2a2a;
+    padding: 2rem;
+    text-align: center;
 }
